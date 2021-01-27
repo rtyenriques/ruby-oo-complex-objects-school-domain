@@ -19,7 +19,7 @@ class School
   end
 
   def grade(grade)
-   roster.detect do |x, y|
+   @roster.detect do |x, y|
     if x == grade
         return y
     end
@@ -28,7 +28,7 @@ end
 
   def sort
     sort_student = {}
-    roster.each do |x, y|
+    @roster.each do |x, y|
         sort_student[x] = y.sort
     end
     sort_student
